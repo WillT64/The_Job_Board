@@ -1,23 +1,87 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./components/Header.jsx";
+import Content from "./components/Content.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
+  let offers = [
+    {
+      title: "Full Times Sale Associate",
+      text: "CDI - Australie - Sydney",
+      color: "red",
+    },
+    {
+      title: "Developpeur React Senior JS",
+      text: "CDI - France",
+      color: "blue",
+    },
+    {
+      title: "Full Times Sale Associate",
+      text: "CDI - Australie - Sydney",
+      color: "violet",
+    },
+    {
+      title: "Full Times Sale Associate",
+      text: "CDI - Australie - Sydney",
+      color: "green",
+    },
+    {
+      title: "Developpeur React Senior JS",
+      text: "CDI - France",
+      color: "cyan",
+    },
+    {
+      title: "Full Times Sale Associate",
+      text: "CDI - Australie - Sydney",
+      color: "rose",
+    },
+    {
+      title: "Full Times Sale Associate",
+      text: "CDI - Australie - Sydney",
+      color: "yellow",
+    },
+    {
+      title: "Developpeur React Senior JS",
+      text: "CDI - France",
+      color: "blue",
+    },
+    {
+      title: "Full Times Sale Associate",
+      text: "CDI - Australie - Sydney",
+      color: "brown",
+    },
+    {
+      title: "Full Times Sale Associate",
+      text: "CDI - Australie - Sydney",
+      color: "orange",
+    },
+    {
+      title: "Developpeur React Senior JS",
+      text: "CDI - France",
+      color: "violet",
+    },
+    {
+      title: "Full Times Sale Associate",
+      text: "CDI - Australie - Sydney",
+      color: "black",
+    },
+  ];
+
+  const repeat = () => {
+    for (let i = 0; i < offers.length; i++) {
+      return offers.map((elem) => {
+        return (
+          <Content title={elem.title} text={elem.text} color={elem.color} />
+        );
+      });
+    }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className="content">{repeat()}</div>
+      <Footer />
     </div>
   );
 }
