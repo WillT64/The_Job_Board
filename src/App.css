@@ -55,7 +55,7 @@
 }
 
 @media (max-width: 1000px) {
-  .App {
+  .content {
     display: flex;
     flex-wrap: wrap;
   }
