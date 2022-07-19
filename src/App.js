@@ -68,13 +68,16 @@ function App() {
   ];
 
   const repeat = () => {
-    for (let i = 0; i < offers.length; i++) {
-      return offers.map((elem) => {
-        return (
-          <Content title={elem.title} text={elem.text} color={elem.color} />
-        );
-      });
-    }
+    return offers.map((elem, index) => {
+      return (
+        <Content
+          key={index}
+          title={elem.title}
+          text={elem.text}
+          color={elem.color}
+        />
+      );
+    });
   };
 
   return (
